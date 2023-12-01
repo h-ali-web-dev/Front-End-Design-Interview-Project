@@ -38,11 +38,11 @@ export default function Login() {
   return (
     <>
       <div className="flex flex-row h-screen bg-white">
-        <div className="self-center place-self-center m-16 px-20 ">
+        <div className="self-center place-self-center lg:m-16 px-6 xs:max-md:m-0 md:px-20">
           <div>
             <img src={Logo} height={44} width={170} />
           </div>
-          <div className="text-[64px] text-[#222B33] font-semibold pb-3 pt-[52px] font-sora leading-[60px] tracking-[-1.5%]">
+          <div className="text-[64px] text-[#222B33] font-semibold pb-3 md:pt-[52px] font-sora leading-[60px] tracking-[-1.5%]">
             Welcome back
           </div>
           <div className="text-[#3B4752] pb-8 font-sans font-light text-lg">
@@ -56,7 +56,7 @@ export default function Login() {
             onChange={(v) => setUsername(v.target.value)}
             placeholder="wesley.mendoza@example.com"
             type="text"
-            className={`w-96 border p-2 bg-slate-100 text-[#3B4752] text-[16px] leading-5 font-[340] ${
+            className={`w-80 md:w-96 border p-2 bg-slate-100 text-[#3B4752] text-[16px] leading-5 font-[340] ${
               isError ? "border-red-600 border-2" : ""
             }`}
           ></input>
@@ -64,7 +64,7 @@ export default function Login() {
             Password
           </div>
           <div
-            className={`w-96 border bg-slate-100 relative ${
+            className={`w-80 md:w-96 border bg-slate-100 relative ${
               isError ? "border-red-600 border-2" : ""
             }`}
           >
@@ -123,7 +123,7 @@ export default function Login() {
           <div className="flex justify-between mt-6 mb-8">
             <span className="items-center flex">
               <input type="checkbox" className="w-5 h-5 mr-2" />
-              <span className="text-[#222B33] font-[360] text-base font-sans ">
+              <span className="text-[#222B33] font-[360] text-base font-sans">
                 Keep me signed in
               </span>
             </span>
@@ -158,7 +158,7 @@ export default function Login() {
             </span>
           </div>
         </div>
-        <div className="bg-slate-600 h-full w-screen bg-[url('./assets/Building.png')] bg-cover"></div>
+        <div className="bg-slate-600 h-full w-screen max-sm:hidden sm:bg-[url('./assets/Building.png')] bg-cover"></div>
       </div>
     </>
   );
